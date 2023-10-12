@@ -1,3 +1,4 @@
+import Uzdevums from "./Uzdevums.js";
 import "./App.css";
 
 function App() {
@@ -42,12 +43,7 @@ function App() {
 
   const uzdevumiJSX = uzdevumi.map((uzdevums, indekss) => {
     return (
-        <div class="uzdevumaDiv">
-          <h2>{uzdevums.title}</h2>
-          <p>ID: {uzdevums.id}</p>
-          <label>Izpildīts: </label>
-          <input type="checkbox" checked={uzdevums.completed} />
-        </div>
+        <Uzdevums title={uzdevums.title} id={uzdevums.id} completed={uzdevums.completed} />
     )
   });
 
